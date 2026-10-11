@@ -1,4 +1,7 @@
-﻿CREATE OR REPLACE PROCEDURE CHECK_WORK_PERIOD IS
+﻿/*Як альтернативний варіант перевірки робочого часу, а в проекті для визначення робочого часу
+використовуватиму функцію is_work_time
+*/
+CREATE OR REPLACE PROCEDURE CHECK_WORK_PERIOD IS
 
   BEGIN
         IF TRIM(TO_CHAR(SYSDATE,'day', 'NLS_DATE_LANGUAGE = UKRAINIAN')) in ('неділя', 'субота')

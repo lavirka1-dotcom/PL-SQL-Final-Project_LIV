@@ -1,4 +1,5 @@
-﻿CREATE OR REPLACE FUNCTION is_work_time RETURN BOOLEAN IS
+﻿--перевірка робочого часу
+CREATE OR REPLACE FUNCTION is_work_time RETURN BOOLEAN IS
 
     v_day  VARCHAR2(20);
     v_hour VARCHAR2(20);
