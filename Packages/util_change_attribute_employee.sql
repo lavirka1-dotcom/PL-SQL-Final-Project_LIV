@@ -59,15 +59,15 @@ BEGIN
   END IF;
 
   --перевірка, чи є якісь параметри для оновлення
-  IF p_first_name IS NULL
-     AND p_last_name IS NULL
-     AND p_email IS NULL
-     AND p_phone_number IS NULL
-     AND p_job_id IS NULL
-     AND p_salary IS NULL
+  IF     p_first_name     IS NULL
+     AND p_last_name      IS NULL
+     AND p_email          IS NULL
+     AND p_phone_number   IS NULL
+     AND p_job_id         IS NULL
+     AND p_salary         IS NULL
      AND p_commission_pct IS NULL
-     AND p_manager_id IS NULL
-     AND p_department_id IS NULL THEN
+     AND p_manager_id     IS NULL
+     AND p_department_id  IS NULL THEN
     raise_application_error(-20001
                            ,'Не передано жодного атрибуту для оновлення');
   END IF;
