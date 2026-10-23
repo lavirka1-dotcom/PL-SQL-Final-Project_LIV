@@ -1,7 +1,7 @@
 ﻿BEGIN
   sys.dbms_scheduler.create_job (job_name        => 'job_api_nbu_sync'
                                 ,job_type        => 'PLSQL_BLOCK'
-                                ,job_action      => 'begin api_nbu_sync(); end;'
+                                ,job_action      => 'begin util.api_nbu_sync(); end;'
                                 ,start_date      => SYSDATE
                                 ,repeat_interval => 'FREQ=DAILY; BYHOUR=6; BYMINUTE=0; BYSECOND=0'
                                 ,end_date        => to_date(NULL)
